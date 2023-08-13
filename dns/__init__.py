@@ -61,6 +61,7 @@ __all__ = [
     "version",
     "versioned",
     "wire",
+    "wiremessage",
     "xfr",
     "zone",
     "zonetypes",
