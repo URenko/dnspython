@@ -28,7 +28,7 @@ DNS opcodes that do not have a more specific class.
    .. attribute:: ednsflags
 
       An ``int``, the EDNS flags.
-      
+
    .. attribute:: payload
 
       An ``int``, the EDNS payload size.  The default is 0.
@@ -71,7 +71,7 @@ DNS opcodes that do not have a more specific class.
    .. attribute:: original_id
 
       An ``int``, the TSIG original id; defaults to the message's id.
-      
+
    .. attribute:: tsig_error
 
       An ``int``, the TSIG error code.  The default is 0.
@@ -126,6 +126,12 @@ DNS opcodes that do not have a more specific class.
       ``(section, name, rdclass, rdtype, covers, deleting)``.  The default
       is ``{}``.  Indexing improves the performance of finding RRsets.
       Indexing can be disabled by setting the index to ``None``.
+
+   .. attribute:: wire
+
+      A ``bytes`` with the wire format data passed to ``from_wire()`` or ``None``
+      if the message was not created by calling ``from_wire()``.
+
 
 The following constants may be used to specify sections in the
 ``find_rrset()`` and ``get_rrset()`` methods:
