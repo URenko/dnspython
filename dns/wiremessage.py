@@ -206,9 +206,9 @@ class Message:
                 output.write(pad_before * "  ")
                 pad_before = 0
             output.write(hex)
-            if pad_after > 0:
-                output.write(pad_after * "  ")
-            if where == start:
+            if where == start and len(annotation) > 0:
+                if pad_after > 0:
+                    output.write(pad_after * "  ")
                 output.write(" ; ")
                 output.write(annotation)
             output.write("\n")
